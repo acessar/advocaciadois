@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva & Associados - Consultoria Jurídica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="logo">
+                <span class="logo-icon">
+                    <div class="balance-scale"></div>
+                </span>
+                Silva & Associados
+            </a>
+            <ul class="nav-links">
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contato" class="btn btn-primary">Consultar</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content scroll-reveal-left">
+            <h1 class="hero-title">Excelência Jurídica a Seu Serviço</h1>
+            <p class="hero-subtitle">Consultoria especializada em direito empresarial, trabalhista e tributário com mais de 20 anos de experiência.</p>
+            <div class="hero-buttons">
+                <a href="#contato" class="btn btn-primary">Agendar Consulta</a>
+                <a href="#servicos" class="btn btn-secondary">Conhecer Serviços</a>
+            </div>
+        </div>
+        <div class="hero-visual scroll-reveal-right">
+            <i class="fas fa-gavel hero-icon"></i>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções jurídicas completas para sua empresa</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="services-grid carousel-container" id="servicos-carousel">
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>Direito Empresarial</h3>
+                        <p>Assessoria completa em constituição, fusão, aquisição e reorganização societária de empresas.</p>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
+                        <h3>Direito Trabalhista</h3>
+                        <p>Orientação em questões trabalhistas, contratos, reclamações e litígios com colaboradores.</p>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon"><i class="fas fa-percent"></i></div>
+                        <h3>Direito Tributário</h3>
+                        <p>Planejamento fiscal estratégico e defesa em processos administrativos e judiciais.</p>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Contrato & Compliance</h3>
+                        <p>Elaboração, análise e conformidade de contratos comerciais e regulamentações.</p>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" data-carousel="servicos-carousel">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav carousel-next" data-carousel="servicos-carousel">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE EXPERTISE -->
+    <section class="section" id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Áreas de Expertise</h2>
+                <p>Especialização em diversos segmentos jurídicos</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="expertise-cards carousel-container" id="expertise-carousel">
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-number">01</div>
+                        <h3>Litígio Comercial</h3>
+                        <p>Representação judicial em disputas comerciais, contratos e questões societárias com expertise comprovada.</p>
+                    </div>
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-number">02</div>
+                        <h3>Propriedade Intelectual</h3>
+                        <p>Proteção de marcas, patentes, direitos autorais e defesa contra infrações.</p>
+                    </div>
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-number">03</div>
+                        <h3>Direito Ambiental</h3>
+                        <p>Consultoria em conformidade ambiental, licenciamentos e defesa em ações ambientais.</p>
+                    </div>
+                    <div class="expertise-card scroll-reveal">
+                        <div class="expertise-number">04</div>
+                        <h3>Direito Imobiliário</h3>
+                        <p>Transações, registros, contenciosos e regularização de propriedades.</p>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" data-carousel="expertise-carousel">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav carousel-next" data-carousel="expertise-carousel">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Nós</h2>
+                <p>Trajetória de sucesso e confiança</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text scroll-reveal-left">
+                    <h3>Mais de 2 Décadas de Excelência Jurídica</h3>
+                    <p>Fundada em 2003, a Silva & Associados consolidou-se como uma das principais referências em consultoria jurídica do país. Nossa equipe é composta por profissionais altamente qualificados com especialização em diversas áreas do direito.</p>
+                    <p>Trabalhamos com empresas de todos os tamanhos, desde startups em fase de crescimento até grandes corporações multinacionais. Cada cliente recebe atendimento personalizado e estratégias adaptadas às suas necessidades específicas.</p>
+                </div>
+                <div class="about-stats scroll-reveal-right">
+                    <div class="stat">
+                        <div class="stat-number">+2.500</div>
+                        <div class="stat-label">Clientes Satisfeitos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">+15.000</div>
+                        <div class="stat-label">Casos Resolvidos</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">+50</div>
+                        <div class="stat-label">Profissionais</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Taxa de Aprovação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Depoimentos de Clientes</h2>
+                <p>Veja o que nossos clientes dizem sobre nós</p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="testimonials-container carousel-container" id="depoimentos-carousel">
+                    <div class="testimonial-card scroll-reveal">
+                        <div class="testimonial-header">
+                            <div class="stars">★★★★★</div>
+                            <h4>João Silva</h4>
+                            <p class="testimonial-role">CEO - Tech Innovations</p>
+                        </div>
+                        <p class="testimonial-text">"A Silva & Associados foi fundamental para resolver nossa reorganização societária. Atendimento excepcional e estratégia impecável."</p>
+                    </div>
+                    <div class="testimonial-card scroll-reveal">
+                        <div class="testimonial-header">
+                            <div class="stars">★★★★★</div>
+                            <h4>Maria Santos</h4>
+                            <p class="testimonial-role">Diretora Financeira - Indústria Brasil</p>
+                        </div>
+                        <p class="testimonial-text">"Impecável no planejamento tributário. Reduziram significativamente nossa carga fiscal mantendo total conformidade legal."</p>
+                    </div>
+                    <div class="testimonial-card scroll-reveal">
+                        <div class="testimonial-header">
+                            <div class="stars">★★★★★</div>
+                            <h4>Carlos Oliveira</h4>
+                            <p class="testimonial-role">Presidente - Consultoria XYZ</p>
+                        </div>
+                        <p class="testimonial-text">"Recomendo fortemente. Resolveram nossos litígios comerciais com profissionalismo e dedicação exemplar."</p>
+                    </div>
+                    <div class="testimonial-card scroll-reveal">
+                        <div class="testimonial-header">
+                            <div class="stars">★★★★★</div>
+                            <h4>Ana Costa</h4>
+                            <p class="testimonial-role">Sócia - Startup Tech</p>
+                        </div>
+                        <p class="testimonial-text">"Expertise incomparável em compliance. Estruturaram toda nossa base legal de forma impeccável."</p>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" data-carousel="depoimentos-carousel">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav carousel-next" data-carousel="depoimentos-carousel">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Dúvidas comuns sobre nossos serviços</p>
+            </div>
+
+            <div class="faq-list scroll-reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como agendar uma consulta inicial?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode agendar uma consulta inicial preenchendo o formulário de contato em nossa página ou entrando em contato diretamente via WhatsApp. Nossa equipe responderá em até 24 horas confirmando a melhor data e horário.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual é o custo de uma consultoria?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os custos variam conforme a complexidade do caso. Oferecemos orçamentos personalizados sem compromisso. Durante a consulta inicial, apresentaremos uma proposta detalhada adaptada às suas necessidades.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês trabalham com empresas pequenas?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Atendemos desde microempresas até grandes corporações. Temos pacotes específicos e personalizados para cada porte de empresa, garantindo acesso a consultoria jurídica de qualidade independente do tamanho do negócio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual é o tempo médio para resolver um caso?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O prazo depende do tipo e complexidade do caso. Consultoria simples podem ser resolvidas em dias, enquanto litígios complexos podem levar meses. Sempre fornecemos um cronograma realista após analisar seu caso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês oferecem serviços de compliance?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, oferecemos serviços completos de compliance incluindo análise de regulamentações, implementação de políticas internas, treinamento de equipes e auditoria contínua para garantir conformidade legal total.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para ajudá-lo</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info scroll-reveal-left">
+                    <h2>Vamos Conversar?</h2>
+                    <p>Possui dúvidas ou deseja conhecer melhor nossos serviços? Entre em contato conosco através dos canais abaixo.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                                <p>CEP: 01310-100</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(11) 3333-4444</p>
+                                <p>(11) 98765-4321</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contato@silvaaassociados.com.br</p>
+                                <p>consultoria@silvaaassociados.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horário de Atendimento</h4>
+                                <p>Segunda a Sexta: 08:00 - 18:00</p>
+                                <p>Sábado: 09:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form scroll-reveal-right">
+                    <div class="form-group">
+                        <input type="text" name="nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 00000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="interesse" required>
+                            <option value="">Selecione uma área de interesse</option>
+                            <option value="Direito Empresarial">Direito Empresarial</option>
+                            <option value="Direito Trabalhista">Direito Trabalhista</option>
+                            <option value="Direito Tributário">Direito Tributário</option>
+                            <option value="Contrato & Compliance">Contrato & Compliance</option>
+                            <option value="Litígio Comercial">Litígio Comercial</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensagem" placeholder="Sua mensagem..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Enviar Consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Silva & Associados</h3>
+                    <p>Consultoria jurídica premium com mais de 20 anos de experiência no mercado.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Serviços</h3>
+                    <a href="#servicos">Direito Empresarial</a>
+                    <a href="#servicos">Direito Trabalhista</a>
+                    <a href="#servicos">Direito Tributário</a>
+                    <a href="#servicos">Contrato & Compliance</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <a href="#sobre">Sobre Nós</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contato">Contato</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Informações</h3>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Serviço</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Conformidade</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Silva & Associados. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
