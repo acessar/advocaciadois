@@ -112,7 +112,7 @@ class CarouselManager {
             if (carousel.isVisible) {
                 this.scrollNext(carousel);
             }
-        }, 6000);
+        }, 5000);
 
         this.intervals.set(carouselId, interval);
     }
@@ -128,40 +128,28 @@ class CarouselManager {
     }
 
     scrollNext(carousel) {
-        const cards = carousel.element.querySelectorAll('[scroll-snap-align]');
-        if (cards.length === 0) return;
+        const container = carousel.element;
+        const scrollAmount = container.clientWidth;
+        const newScrollLeft = container.scrollLeft + scrollAmount;
+        const maxScroll = container.scrollWidth - container.clientWidth;
 
-        const gap = parseInt(window.getComputedStyle(carousel.element).gap) || 0;
-        const cardWidth = cards[0].offsetWidth + gap;
-        const currentScroll = carousel.element.scrollLeft;
-        const nextScroll = currentScroll + cardWidth;
-        const maxScroll = carousel.element.scrollWidth - carousel.element.clientWidth;
-
-        if (nextScroll >= maxScroll - 10) {
-            carousel.element.scrollTo({ left: 0, behavior: 'smooth' });
-            carousel.currentIndex = 0;
+        if (newScrollLeft >= maxScroll - 10) { // -10 for tolerance
+            container.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
-            carousel.element.scrollBy({ left: cardWidth, behavior: 'smooth' });
-            carousel.currentIndex++;
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
     }
 
     scrollPrev(carousel) {
-        const cards = carousel.element.querySelectorAll('[scroll-snap-align]');
-        if (cards.length === 0) return;
+        const container = carousel.element;
+        const scrollAmount = container.clientWidth;
+        const newScrollLeft = container.scrollLeft - scrollAmount;
 
-        const gap = parseInt(window.getComputedStyle(carousel.element).gap) || 0;
-        const cardWidth = cards[0].offsetWidth + gap;
-        const currentScroll = carousel.element.scrollLeft;
-        const prevScroll = currentScroll - cardWidth;
-
-        if (prevScroll <= 0) {
-            const maxScroll = carousel.element.scrollWidth - carousel.element.clientWidth;
-            carousel.element.scrollTo({ left: maxScroll, behavior: 'smooth' });
-            carousel.currentIndex = Math.ceil((maxScroll + cardWidth) / cardWidth) - 1;
+        if (newScrollLeft < 0) {
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            container.scrollTo({ left: maxScroll, behavior: 'smooth' });
         } else {
-            carousel.element.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-            carousel.currentIndex--;
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         }
     }
 
@@ -259,32 +247,21 @@ document.getElementById('telefone').addEventListener('input', function(e) {
 // FECHA MENU AO CLICAR EM LINK
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        navLinks.style.display = 'none';
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        document.querySelector('.header').classList.remove('nav-open');
     });
 });
 
 // MOBILE MENU TOGGLE
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    const isVisible = navLinks.style.display === 'flex';
+    const header = document.querySelector('.header');
+    header.classList.toggle('nav-open');
     
-    if (isVisible) {
-        navLinks.style.display = 'none';
-        this.innerHTML = '<i class="fas fa-bars"></i>';
+    const icon = this.querySelector('i');
+    if (header.classList.contains('nav-open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
     } else {
-        navLinks.style.display = 'flex';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.background = 'rgba(26, 21, 16, 0.98)';
-        navLinks.style.padding = '2rem';
-        navLinks.style.zIndex = '999';
-        navLinks.style.gap = '1rem';
-        this.innerHTML = '<i class="fas fa-times"></i>';
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
     }
 });
